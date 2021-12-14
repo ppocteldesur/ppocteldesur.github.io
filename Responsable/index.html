@@ -1,0 +1,71 @@
+<html><head>
+  <title>PPOC Web</title>
+    <link href='https://ppocteldesur.github.io/Inicio//Img/logo.png' rel='shortcut icon' type='image/png'>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="estilo.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src='https://cdn.firebase.com/js/client/1.0.17/firebase.js'></script>
+  <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+
+</head>
+<script>
+var server=""
+function cuadranteactual() {location.href = server + "https://drive.google.com/drive/u/2/folders/1kzKXwujlsmnvsS0I7nlg4NZaZ9aCz4qq"}
+function cuadranteproximo() {location.href = server + "https://drive.google.com/drive/u/2/folders/1cGiQfgUjSxfOX0eu5UYtKrD1cEx37Mlj"}
+function cerrarsicion() {location.href = server + "https://ppocteldesur.github.io/Inicio/"}
+
+function formulario() {
+var meta = location.hash
+ location.href = server + "Formulario" + meta
+}
+
+
+function usermaker() {location.href = server + "Usuarios/"}
+function informe() {location.href = server + "Informe/"}
+
+function Start() {
+var todo = location.hash
+todo = todo.replace("#","");
+
+          document.getElementById("device").innerHTML = todo;
+if (todo==="") {location.href ="https://ppocteldesur.github.io/Inicio/"}
+}
+</script>
+
+
+<body>
+<header>
+  <section class="barra">
+    <nav>
+      <ul>
+        <li><a href="https://ppocteldesur.github.io/Inicio/">PPOC</a></li>
+      </ul>
+    </nav>
+    </section>
+</header>
+
+<div id="caja">
+      <h2>Bienvenido/a <div id="device"></h2>
+      <br>
+<i class="fas fa-calendar-alt"></i>
+<center>
+<button class="botton rojo" onclick="formulario()">FORMULARIO</button>
+
+      <br><br><hr class="forma1">
+
+<button class="button azul" onclick="cuadranteactual()">CUADRANTE ACTUAL</button>
+<button class="button azul" onclick="cuadranteproximo()">CUADRANTE PROXIMO</button>
+
+      <br><br><hr class="forma1">
+
+<button class="botton cerrar" onclick="cerrarsicion()">CERRAR SESIÓN</button>
+</center>
+    </div>
+</section>
+
+<body onload="Start()">
+</html>

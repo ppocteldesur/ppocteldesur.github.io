@@ -1,0 +1,82 @@
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Ángel Alonso">
+    <link href='https://ppocteldesur.github.io/Img/logo.png' rel='shortcut icon' type='image/png'>
+
+<meta property="og:image" content="https://ppocteldesur.github.io/Img/logo.png">
+<meta property="og:description" content="Pagina de predicacion publica de los testigos de Jehová.">
+<meta name="description" content="Pagina de predicacion publica de los testigos de Jehová.">
+<meta name="rights" content="Pagina de predicacion publica de los testigos de Jehová."/>
+<meta name="keywords" content="Pagina de predicacion publica de los testigos de Jehová."/>
+<meta property="og:title" content="PPOC">
+
+  <title>PPOC</title>
+
+  <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+
+<body>
+<header>
+  <section class="wrapper">
+		<nav>
+			<ul>
+				<li><a href="https://ppocteldesur.github.io">PPOC</a></li>
+			</ul>
+    </nav>
+    </section>
+</header>
+<section class="contenido wrapper"></section>
+
+<div id="caja">
+      <h2>Iniciar sesión</h2>
+      <br>
+
+<texto>Usuario</texto><br>
+<input type="text" id="user" rows="1" cols="35">
+<br><br>
+
+<texto>Contraseña</texto><br>
+<input type="password" id="password" rows="1" cols="35">
+<br><br>
+<button class="azul" onclick="iniciarsesion()" style='width:100px; height:50px'>ENTRAR</button>
+<br><br>
+
+</div>
+<hr>
+
+<script>
+	var url="https://ppoc-usuarios.firebaseio.com/"
+
+	function iniciarsesion() {
+		var LEADERBOARD_SIZE = 5000000;
+		var scoreListRef = new Firebase(url);
+		var htmlForPath = {};
+
+		function handleScoreAdded(scoreSnapshot, prevScoreName) {
+			var usuario = scoreSnapshot.val().User
+			var pass = scoreSnapshot.val().Pass
+			var permisos = scoreSnapshot.val().Permisos
+			var password = document.getElementById('password').value;
+			var user = document.getElementById('user').value;
+			var key=usuario+pass
+			var key2=user+password
+			var url1=" "
+
+			if (key2===key) {
+				location.href = permisos + "#" + usuario
+			}
+		    }
+
+	var scoreListView = scoreListRef.limitToLast(LEADERBOARD_SIZE);
+
+	scoreListView.on('child_added', function (newScoreSnapshot, prevScoreName) {
+		handleScoreAdded(newScoreSnapshot, prevScoreName);
+	});
+}
+</script>
+
+<body onload="Start()">
+</html>

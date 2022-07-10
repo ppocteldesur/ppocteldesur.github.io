@@ -30,10 +30,6 @@ function informe() {location.href = server + "Informe/"}
 function Start() {
 var todo = location.hash
 todo = todo.replace("#","");
-todo = todo.replace("%20"," ");
-
-
-
 
           document.getElementById("device").innerHTML = todo;
 if (todo==="") {location.href ="https://ppocteldesur.github.io"}

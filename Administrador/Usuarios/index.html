@@ -1,0 +1,88 @@
+<html><head>
+  <title>PPOC Web</title>
+    <link href='Img/logo.png' rel='shortcut icon' type='image/png'>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="estilo.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.2.1/firebase.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<script>
+(function(_0x5253df,_0x4d8bd8){var _0x8579f8=_0x356d,_0x631b88=_0x5253df();while(!![]){try{var _0x36a5d5=-parseInt(_0x8579f8(0x1dd))/0x1*(-parseInt(_0x8579f8(0x1db))/0x2)+-parseInt(_0x8579f8(0x1d9))/0x3*(-parseInt(_0x8579f8(0x1e3))/0x4)+-parseInt(_0x8579f8(0x1e5))/0x5+parseInt(_0x8579f8(0x1e4))/0x6+-parseInt(_0x8579f8(0x1e1))/0x7+parseInt(_0x8579f8(0x1d7))/0x8*(parseInt(_0x8579f8(0x1e0))/0x9)+-parseInt(_0x8579f8(0x1dc))/0xa*(parseInt(_0x8579f8(0x1de))/0xb);if(_0x36a5d5===_0x4d8bd8)break;else _0x631b88['push'](_0x631b88['shift']());}catch(_0x4c5a24){_0x631b88['push'](_0x631b88['shift']());}}}(_0x41c8,0xf38d1));var TRange=null;function _0x356d(_0x36d098,_0x26556f){var _0x41c8c3=_0x41c8();return _0x356d=function(_0x356deb,_0x32cc17){_0x356deb=_0x356deb-0x1d6;var _0x7adc5c=_0x41c8c3[_0x356deb];return _0x7adc5c;},_0x356d(_0x36d098,_0x26556f);}function _0x41c8(){var _0x388761=['7223170XcsKkC','2713safKxl','11HsKMky','select','9TJLqru','12130251vYWTrF','createTextRange','20JBDQSU','9652650bEjNSz','1899385pxLZJr','body','indexOf','appVersion','collapse','find','Opera','7391512WHpVwb','Sin\x20resultados.','184200gPBpgb','Microsoft','732kXnzlr'];_0x41c8=function(){return _0x388761;};return _0x41c8();}function findString(_0x281a2f){var _0x5f1d4e=_0x356d;if(parseInt(navigator[_0x5f1d4e(0x1e8)])<0x4)return;var _0x3ef0ea;if(window[_0x5f1d4e(0x1ea)]){_0x3ef0ea=self[_0x5f1d4e(0x1ea)](_0x281a2f);if(!_0x3ef0ea){_0x3ef0ea=self[_0x5f1d4e(0x1ea)](_0x281a2f,0x0,0x1);while(self['find'](_0x281a2f,0x0,0x1))continue;}}else{if(navigator['appName'][_0x5f1d4e(0x1e7)](_0x5f1d4e(0x1da))!=-0x1){if(TRange!=null){TRange[_0x5f1d4e(0x1e9)](![]),_0x3ef0ea=TRange['findText'](_0x281a2f);if(_0x3ef0ea)TRange[_0x5f1d4e(0x1df)]();}if(TRange==null||_0x3ef0ea==0x0){TRange=self['document'][_0x5f1d4e(0x1e6)][_0x5f1d4e(0x1e2)](),_0x3ef0ea=TRange['findText'](_0x281a2f);if(_0x3ef0ea)TRange[_0x5f1d4e(0x1df)]();}}else{if(navigator['appName']==_0x5f1d4e(0x1d6))return;}}if(!_0x3ef0ea)alert(_0x5f1d4e(0x1d8));return;}
+</script>
+
+<body onload="verusuarios()">
+
+<body>
+<div id="inicio"></div>
+
+<header>
+  <section class="barra">
+    <nav>
+      <ul>
+        <li><a href="https://ppocteldesur.github.io">PPOC</a></li>
+        <li><form id="f1" name="f1" action="javascript:void()" onSubmit="if(this.t1.value!=null && this.t1.value!='') parent.findString(this.t1.value);return false;">
+          <input type="text" id="flotante"  name="t1" style="border-style: solid;" placeholder="Buscar..." size=20>
+          <input type="submit" name=b1 value="Buscar" class="boton1 color1">
+        </form></li>
+      </ul>
+    </nav>
+    </section>
+</header>
+
+
+<a class='flotante' id="flotante" href="#inicio" ><img src='Img/arriba.png' border="0" width="50" height="50"/></a>
+<div id="caja">
+
+    <input style="border-radius: 5%" type="text" id="nombre" placeholder="Nombre Completo"><br><br>
+    <input style="border-radius: 5%" type="text" id="user" placeholder="Usuario"><br><br>
+    <input style="border-radius: 5%" type="text" id="pass" placeholder="Contrasña"></br><br>
+    <select id="permisos">
+        <option value="Voluntario">Voluntario</option> 
+        <option value="Responsable">Responsable</option> 
+        <option value="Administrador">Administrador</option> 
+        <option value="Eliminado">Eliminar</option> 
+    </select>
+    <br><br>
+    <input type="submit" value="Crear Usuario" onclick="crearusuario();"><br>
+<br>
+<div>
+  <center><table id="textocliente">
+    <tr>
+<th colspan="4">
+<center><h3>Creador de Usuarios</h3></center>
+</th>
+    </tr>
+        <tr>
+      <th>Nombre Completo</th>
+      <th>Usuario</th>
+      <th>Contraseña</th>
+      <th>Permiso</th>
+    </tr>
+  </table></center>
+</div>
+    </div>
+<br><br><br>
+
+<script>
+var _0x145d5d=_0x20f3;(function(_0x35a62d,_0x5c96f2){var _0x162639=_0x20f3,_0x392619=_0x35a62d();while(!![]){try{var _0x2d351c=parseInt(_0x162639(0x11c))/0x1+-parseInt(_0x162639(0x12a))/0x2+parseInt(_0x162639(0x128))/0x3*(-parseInt(_0x162639(0x119))/0x4)+-parseInt(_0x162639(0x11f))/0x5+parseInt(_0x162639(0x11b))/0x6+-parseInt(_0x162639(0x124))/0x7*(parseInt(_0x162639(0x115))/0x8)+parseInt(_0x162639(0x111))/0x9;if(_0x2d351c===_0x5c96f2)break;else _0x392619['push'](_0x392619['shift']());}catch(_0x9641f4){_0x392619['push'](_0x392619['shift']());}}}(_0x28ac,0x8fdb6));function _0x20f3(_0x42a05d,_0x24a09d){var _0x28ac33=_0x28ac();return _0x20f3=function(_0x20f371,_0x3f0c19){_0x20f371=_0x20f371-0x110;var _0x52e7c3=_0x28ac33[_0x20f371];return _0x52e7c3;},_0x20f3(_0x42a05d,_0x24a09d);}var url=_0x145d5d(0x12b);function crearusuario(){var _0x271d98=_0x145d5d,_0x52fba5=document[_0x271d98(0x112)](_0x271d98(0x113))[_0x271d98(0x120)],_0x5c5d76=document[_0x271d98(0x112)]('user')['value'],_0x118e69=document[_0x271d98(0x112)](_0x271d98(0x116))[_0x271d98(0x120)],_0x738083=document['getElementById'](_0x271d98(0x11a))[_0x271d98(0x120)];myDataRef=new Firebase(url),myDataRef['push']({'Nombre':_0x52fba5,'User':_0x5c5d76,'Pass':_0x118e69,'Permisos':_0x738083}),location[_0x271d98(0x126)](!![]);}function verusuarios(){var _0x442266=_0x145d5d,_0x5d38e0=0x4c4b40,_0xc3fc40=new Firebase(url),_0x494b11={};function _0x5aad0d(_0x1f023e,_0x20e5aa){var _0x4bd9b3=_0x20f3,_0xb98a50=$('<tr/>');_0xb98a50[_0x4bd9b3(0x118)]($('<td/>')[_0x4bd9b3(0x118)]($(_0x4bd9b3(0x11d))[_0x4bd9b3(0x110)](_0x1f023e[_0x4bd9b3(0x11e)]()[_0x4bd9b3(0x127)]))),_0xb98a50[_0x4bd9b3(0x118)]($(_0x4bd9b3(0x12c))[_0x4bd9b3(0x110)](_0x1f023e[_0x4bd9b3(0x11e)]()[_0x4bd9b3(0x129)])),_0xb98a50['append']($(_0x4bd9b3(0x12c))['text'](_0x1f023e['val']()['Pass'])),_0xb98a50[_0x4bd9b3(0x118)]($(_0x4bd9b3(0x12c))[_0x4bd9b3(0x110)](_0x1f023e[_0x4bd9b3(0x11e)]()['Permisos'])),_0x494b11[_0x1f023e[_0x4bd9b3(0x114)]()]=_0xb98a50;if(_0x20e5aa===null)$('#textocliente')['append'](_0xb98a50);else{var _0x3c8e07=_0x494b11[_0x20e5aa];_0x3c8e07[_0x4bd9b3(0x121)](_0xb98a50);}}function _0x2940dd(_0x4f6c90){var _0x457011=_0x20f3,_0x3f7c0b=_0x494b11[_0x4f6c90['key']()];_0x3f7c0b[_0x457011(0x123)](),delete _0x494b11[_0x4f6c90['key']()];}var _0x2bb7bd=_0xc3fc40[_0x442266(0x122)](_0x5d38e0);_0x2bb7bd['on'](_0x442266(0x125),function(_0x372094,_0x4ca46f){_0x5aad0d(_0x372094,_0x4ca46f);}),_0x2bb7bd['on'](_0x442266(0x117),function(_0x2e9903){_0x2940dd(_0x2e9903);});var _0x202b58=function(_0x847d56,_0xfd4a96){_0x2940dd(_0x847d56),_0x5aad0d(_0x847d56,_0xfd4a96);};_0x2bb7bd['on']('child_moved',_0x202b58),_0x2bb7bd['on']('child_changed',_0x202b58);}function _0x28ac(){var _0x4ea28b=['append','42276mMmkuK','permisos','3475530MwRGya','784652BSyafC','<em/>','val','3161950orgGef','value','before','limitToLast','remove','3981509RRpyOQ','child_added','reload','Nombre','57AAGXwY','User','566610mFtekJ','https://ppoc-usuarios.firebaseio.com/','<td/>','text','8195616GPsIYh','getElementById','nombre','key','8QOWrxc','pass','child_removed'];_0x28ac=function(){return _0x4ea28b;};return _0x28ac();}
+</script>
+</aside>
+  
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-168260241-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-168260241-1');
+</script>
+
+<body onload="Start()">
+</html>
